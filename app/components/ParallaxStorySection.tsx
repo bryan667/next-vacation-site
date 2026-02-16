@@ -32,6 +32,7 @@ export function ParallaxStorySection({
         loading="lazy"
         decoding="async"
         sizes="100vw"
+        unoptimized
         quality={100}
         className="scale-100 object-cover"
       />

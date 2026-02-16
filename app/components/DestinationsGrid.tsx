@@ -32,6 +32,7 @@ export function DestinationsGrid({ cards }: DestinationsGridProps) {
               src={card.image}
               alt={card.alt}
               fill
+              unoptimized
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-110"
             />

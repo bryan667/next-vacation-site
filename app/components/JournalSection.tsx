@@ -36,6 +36,7 @@ export function JournalSection({ entries }: JournalSectionProps) {
                 alt={entry.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
+                unoptimized
                 className="object-cover"
               />
             </div>
