@@ -29,6 +29,7 @@ export const hero = {
   description:
     'Surrender to moonlit shores, private island sanctuaries, and celestial nights beneath endless skies. Celestia Pacific curates intimate, ultra-luxury escapes across the Philippines and Asia Pacific for those who seek the extraordinary.',
   image: '/vacation/aerial-luxury-overwater-villas-resort.webp',
+  mobileImage: '/vacation/aerial-luxury-overwater-villas-resort.webp',
 };
 
 export const parallaxSections: ParallaxSection[] = [

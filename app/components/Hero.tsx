@@ -1,13 +1,9 @@
 import Image from 'next/image';
+import { hero } from '../lib/content';
 
-type HeroProps = {
-  subtitle: string;
-  title: string;
-  description: string;
-  image: string;
-};
+export function Hero() {
+  const { subtitle, title, description, image } = hero;
 
-export function Hero({ subtitle, title, description, image }: HeroProps) {
   return (
     <section className="relative flex h-screen items-center justify-center overflow-hidden">
       <div className="absolute inset-0" data-parallax="0.3">

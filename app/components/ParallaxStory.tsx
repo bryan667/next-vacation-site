@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-type ParallaxStorySectionProps = {
+type Section = {
   id?: string;
   label: string;
   title: string;
@@ -9,17 +9,16 @@ type ParallaxStorySectionProps = {
   align?: 'left' | 'right';
 };
 
+type ParallaxStoryProps = {
+  section: Section;
+};
+
 const revealClass =
   'animate-on-scroll opacity-0 translate-y-10 transition-all duration-[800ms] ease-out [&.visible]:translate-y-0 [&.visible]:opacity-100';
 
-export function ParallaxStorySection({
-  id,
-  label,
-  title,
-  text,
-  image,
-  align = 'left',
-}: ParallaxStorySectionProps) {
+export function ParallaxStory(props: ParallaxStoryProps) {
+  const { id, label, title, text, image, align = 'left' } = props.section;
+
   return (
     <section
       className="relative flex min-h-screen items-center overflow-hidden"

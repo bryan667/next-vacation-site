@@ -1,14 +1,10 @@
 import Image from 'next/image';
-import type { DestinationCard } from '../lib/content';
-
-type DestinationsGridProps = {
-  cards: DestinationCard[];
-};
+import { destinationCards } from '../lib/content';
 
 const revealClass =
   'animate-on-scroll opacity-0 translate-y-10 transition-all duration-[800ms] ease-out [&.visible]:translate-y-0 [&.visible]:opacity-100';
 
-export function DestinationsGrid({ cards }: DestinationsGridProps) {
+export function DestinationsGrid() {
   return (
     <section
       className="bg-ocean-depth px-16 py-32 max-md:px-6"
@@ -23,7 +19,7 @@ export function DestinationsGrid({ cards }: DestinationsGridProps) {
         </h2>
       </div>
       <div className="mx-auto grid max-w-[1400px] grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8 max-md:grid-cols-1">
-        {cards.map((card) => (
+        {destinationCards.map((card) => (
           <div
             className={`${revealClass} group relative h-[500px] cursor-pointer overflow-hidden rounded-lg`}
             key={card.title}

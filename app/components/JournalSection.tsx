@@ -1,16 +1,12 @@
 import Image from 'next/image';
-import type { JournalEntry } from '../lib/content';
-
-type JournalSectionProps = {
-  entries: JournalEntry[];
-};
+import { journalEntries } from '../lib/content';
 
 const revealClass =
   'animate-on-scroll opacity-0 translate-y-10 transition-all duration-[800ms] ease-out [&.visible]:translate-y-0 [&.visible]:opacity-100';
 
 const tiltClasses = ['-rotate-1', 'rotate-1', '-rotate-[0.5deg]'];
 
-export function JournalSection({ entries }: JournalSectionProps) {
+export function JournalSection() {
   return (
     <section
       className="bg-linear-to-b from-ocean-depth to-[#0d2d3d] px-16 py-32 max-md:px-6"
@@ -25,7 +21,7 @@ export function JournalSection({ entries }: JournalSectionProps) {
         </h2>
       </div>
       <div className="mx-auto grid max-w-[1200px] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12">
-        {entries.map((entry, index) => (
+        {journalEntries.map((entry, index) => (
           <article
             className={`${revealClass} ${tiltClasses[index % tiltClasses.length]} overflow-hidden rounded-[4px] border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.08)] backdrop-blur-[10px] transition-transform duration-300 hover:rotate-0 hover:scale-[1.02]`}
             key={entry.title}
