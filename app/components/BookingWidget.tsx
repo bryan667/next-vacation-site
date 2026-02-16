@@ -5,6 +5,8 @@ import { useState } from 'react';
 export function BookingWidget() {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [travelers, setTravelers] = useState(2);
+  const [fromDate, setFromDate] = useState('');
+  const [toDate, setToDate] = useState('');
 
   const updateTravelers = (delta: number) => {
     setTravelers((prev) => Math.max(1, Math.min(12, prev + delta)));
@@ -51,21 +53,41 @@ export function BookingWidget() {
         </div>
 
         <div className="mb-6">
-          <label
-            htmlFor="travel-dates"
-            className="mb-2 block text-xs uppercase tracking-[2px] text-sand-gold"
-          >
+          <label className="mb-2 block text-xs uppercase tracking-[2px] text-sand-gold">
             Travel Dates
           </label>
-          <input
-            id="travel-dates"
-            type="text"
-            placeholder="Select dates"
-            className="w-full rounded-[10px] border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.05)] px-4 py-4 text-[0.95rem] outline-none transition-colors placeholder:text-paper-white/70 focus:border-sand-gold"
-            onFocus={(event) => {
-              event.currentTarget.type = 'date';
-            }}
-          />
+          <div className="grid grid-cols-2 gap-3 max-sm:grid-cols-1">
+            <input
+              id="travel-from"
+              type="date"
+              aria-label="Travel from date"
+              value={fromDate}
+              max={toDate || undefined}
+              className="w-full rounded-[10px] border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.05)] px-4 py-4 text-[0.95rem] outline-none transition-colors focus:border-sand-gold"
+              onChange={(event) => {
+                const nextFrom = event.currentTarget.value;
+                setFromDate(nextFrom);
+                if (toDate && nextFrom > toDate) {
+                  setToDate(nextFrom);
+                }
+              }}
+            />
+            <input
+              id="travel-to"
+              type="date"
+              aria-label="Travel to date"
+              value={toDate}
+              min={fromDate || undefined}
+              className="w-full rounded-[10px] border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.05)] px-4 py-4 text-[0.95rem] outline-none transition-colors focus:border-sand-gold"
+              onChange={(event) => {
+                const nextTo = event.currentTarget.value;
+                setToDate(nextTo);
+                if (fromDate && nextTo < fromDate) {
+                  setFromDate(nextTo);
+                }
+              }}
+            />
+          </div>
         </div>
 
         <div className="mb-6">

@@ -29,15 +29,17 @@ export function ParallaxStorySection({
         src={image}
         alt=""
         fill
-        priority
+        loading="lazy"
+        decoding="async"
         sizes="100vw"
-        className="scale-110 object-cover"
+        quality={100}
+        className="scale-100 object-cover"
       />
       <div className="absolute inset-0 bg-linear-[135deg,rgba(11,37,50,0.7)_0%,rgba(11,37,50,0.3)_50%,rgba(30,63,32,0.5)_100%]" />
       <div
-        className={`${revealClass} backdrop-blur-[2px] relative z-10 max-w-[650px] p-24 max-lg:p-12 max-md:max-w-full ${align === 'right' ? 'ml-auto' : ''}`.trim()}
+        className={`${revealClass} relative z-10 max-w-[650px] p-24 max-lg:p-12 max-md:max-w-full ${align === 'right' ? 'ml-auto' : ''}`.trim()}
       >
-        <span className="mb-4 block text-xs uppercase tracking-[4px] text-[1rem] font-bold text-sand-gold">
+        <span className="mb-4 block uppercase tracking-[4px] text-[1rem] font-bold text-sand-gold">
           {label}
         </span>
         <h2 className="mb-6 text-[clamp(2.5rem,5vw,4rem)] leading-[1.2] [font-family:var(--font-caveat)]">

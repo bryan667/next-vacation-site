@@ -15,8 +15,8 @@ export function DestinationsGrid({ cards }: DestinationsGridProps) {
       id="destinations-grid"
     >
       <div className="mb-20 text-center">
-        <span className="mb-4 block text-xs uppercase tracking-[4px] text-sand-gold">
-          Curated Collection
+        <span className="mb-4 block text-sm uppercase tracking-[4px] text-sand-gold">
+          Featured Escapes
         </span>
         <h2 className="text-[clamp(2.5rem,5vw,4rem)] [font-family:var(--font-caveat)]">
           Signature Expeditions
@@ -36,7 +36,7 @@ export function DestinationsGrid({ cards }: DestinationsGridProps) {
               className="object-cover transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-110"
             />
             <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-[rgba(11,37,50,0.9)] to-transparent p-8 transition-all duration-300 group-hover:from-[rgba(30,63,32,0.95)] group-hover:to-[rgba(30,63,32,0.3)]">
-              <span className="mb-2 text-[0.7rem] uppercase tracking-[3px] text-sand-gold">
+              <span className="mb-2 text-[0.9rem] uppercase tracking-[3px] text-sand-gold">
                 {card.label}
               </span>
               <h3 className="mb-2 text-[2.2rem] [font-family:var(--font-caveat)]">

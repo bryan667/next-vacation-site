@@ -17,7 +17,7 @@ export function JournalSection({ entries }: JournalSectionProps) {
       id="stories"
     >
       <div className="mb-20 text-center">
-        <span className="mb-4 block text-xs uppercase tracking-[4px] text-sand-gold">
+        <span className="mb-4 block text-sm uppercase tracking-[4px] text-sand-gold">
           Islands & Horizons
         </span>
         <h2 className="text-[clamp(2.5rem,5vw,4rem)] [font-family:var(--font-caveat)]">
