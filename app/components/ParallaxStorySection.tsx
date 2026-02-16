@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type ParallaxStorySectionProps = {
   id?: string;
   label: string;
@@ -23,10 +25,13 @@ export function ParallaxStorySection({
       className="relative flex min-h-screen items-center overflow-hidden"
       id={id}
     >
-      <div
-        className="absolute inset-[-100px] bg-cover bg-center will-change-transform"
-        data-parallax="0.5"
-        style={{ backgroundImage: `url('${image}')` }}
+      <Image
+        src={image}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="scale-110 object-cover"
       />
       <div className="absolute inset-0 bg-linear-[135deg,rgba(11,37,50,0.7)_0%,rgba(11,37,50,0.3)_50%,rgba(30,63,32,0.5)_100%]" />
       <div
