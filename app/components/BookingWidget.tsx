@@ -13,16 +13,16 @@ export function BookingWidget() {
   return (
     <div className="fixed right-8 bottom-8 z-[1000] max-md:right-4 max-md:bottom-4">
       <div
-        className={`absolute right-0 bottom-[90px] w-[380px] rounded-[20px] border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.08)] p-8 opacity-0 shadow-[0_25px_80px_rgba(0,0,0,0.4)] backdrop-blur-[30px] invisible translate-y-5 transition-all duration-300 max-md:-right-4 max-md:w-[calc(100vw-4rem)] ${bookingOpen ? 'active' : ''} [&.active]:visible [&.active]:translate-y-0 [&.active]:opacity-100`}
+        className={`absolute right-0 bottom-[90px] w-[380px] rounded-[20px] border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.08)] p-8 opacity-0 shadow-[0_25px_80px_rgba(0,0,0,0.4)] backdrop-blur-[35px] invisible translate-y-5 transition-all duration-300 max-md:-right-4 max-md:w-[calc(100vw-4rem)] ${bookingOpen ? 'active' : ''} [&.active]:visible [&.active]:translate-y-0 [&.active]:opacity-100`}
       >
-        <h3 className="mb-6 text-[2rem] [font-family:var(--font-caveat)]">
+        <h3 className="mb-6 text-[2rem] [font-family:var(--font-caveat)] text-shadow-md">
           Begin Your Journey
         </h3>
 
         <div className="mb-6">
           <label
             htmlFor="destination"
-            className="mb-2 block text-xs uppercase tracking-[2px] text-sand-gold"
+            className="mb-2 block text-xs uppercase tracking-[2px] text-sand-gold text-shadow-md"
           >
             Destination
           </label>

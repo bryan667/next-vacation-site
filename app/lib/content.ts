@@ -48,7 +48,7 @@ export const parallaxSections: ParallaxSection[] = [
     align: 'right',
   },
   {
-    id: 'experiences',
+    id: 'adventures',
     label: 'Siargao',
     title: 'Island Rhythm & Endless Horizons',
     text: 'Surf world-class waves at Cloud 9, unwind in hidden lagoons, and discover palm-lined roads that stretch into golden sunsets. Barefoot luxury meets laid-back island soul.',

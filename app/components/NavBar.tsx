@@ -11,8 +11,8 @@ export function NavBar() {
         Celestia Pacific
       </a>
       <ul className="hidden list-none gap-12 md:flex">
-        {["Destinations", "Experiences", "Journal", "Contact"].map((label) => {
-          const href = `#${label.toLowerCase() === "contact" ? "contact" : label.toLowerCase()}`;
+        {['Destinations', 'Adventures', 'Stories', 'Contact'].map((label) => {
+          const href = `#${label.toLowerCase() === 'contact' ? 'contact' : label.toLowerCase()}`;
           return (
             <li key={label}>
               <a
