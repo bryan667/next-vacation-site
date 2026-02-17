@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: 'Luxury Travel Philippines & Asia Pacific | Celestia Pacific',
   description:
     'Celestia Pacific offers bespoke luxury travel experiences across the Philippines and Asia Pacific. Private island resorts, curated itineraries, yacht charters, and exclusive escapes tailored for discerning travelers.',
+  metadataBase: new URL('https://next-vacation-site.vercel.app'),
   keywords: [
     'Luxury travel Philippines',
     'Asia Pacific luxury tours',
@@ -31,6 +32,23 @@ export const metadata: Metadata = {
     description:
       'Exclusive luxury travel experiences in the Philippines and Asia Pacific. Private islands, five-star resorts, and curated bespoke journeys.',
     type: 'website',
+    url: 'https://next-vacation-site.vercel.app',
+    siteName: 'Celestia Pacific',
+    images: [
+      {
+        url: '/preview.jpg',
+        width: 610,
+        height: 409,
+        alt: 'Celestia Pacific luxury travel preview image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Celestia Pacific | Luxury Travel Philippines & Asia Pacific',
+    description:
+      'Exclusive luxury travel experiences in the Philippines and Asia Pacific. Private islands, five-star resorts, and curated bespoke journeys.',
+    images: ['/preview.jpg'],
   },
   other: {
     github: 'https://github.com/bryan667',
