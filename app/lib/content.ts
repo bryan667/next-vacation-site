@@ -24,7 +24,7 @@ export type JournalEntry = {
 };
 
 export const hero = {
-  subtitle: 'Heavenly Escapes, Perfected',
+  subtitle: 'Heavenly Escapes Perfected',
   title: 'Where the Stars Meet the Sea',
   description:
     'Surrender to moonlit shores, private island sanctuaries, and celestial nights beneath endless skies. Celestia Pacific curates intimate, ultra-luxury escapes across the Philippines and Asia Pacific for those who seek the extraordinary.',

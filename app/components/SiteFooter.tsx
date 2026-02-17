@@ -33,6 +33,7 @@ export function SiteFooter() {
                   href={destination.link}
                   rel="noreferrer"
                   target="_blank"
+                  aria-label={`Explore ${destination.name} on Google (opens in a new tab)`}
                   className="text-[0.9rem] font-light opacity-70 transition-opacity hover:opacity-100"
                 >
                   {destination.name}
@@ -88,6 +89,7 @@ export function SiteFooter() {
             <li>
               <a
                 href="tel:+639182345321"
+                aria-label="Call Celestia Pacific at +639182345321"
                 className="text-[0.9rem] font-light opacity-70 transition-opacity hover:opacity-100"
               >
                 +639182345321
@@ -96,6 +98,7 @@ export function SiteFooter() {
             <li>
               <a
                 href="mailto:journeys@celestia-pacific.com"
+                aria-label="Email Celestia Pacific at journeys@celestia-pacific.com"
                 className="text-[0.9rem] font-light opacity-70 transition-opacity hover:opacity-100"
               >
                 journeys@celestia-pacific.com
@@ -106,16 +109,31 @@ export function SiteFooter() {
                 href="https://www.google.com/search?q=Philippines"
                 rel="noreferrer"
                 target="_blank"
+                aria-label="View Philippines information on Google (opens in a new tab)"
                 className="text-[0.9rem] font-light opacity-70 transition-opacity hover:opacity-100"
               >
                 Philippines
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/bryan667/next-vacation-site"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="View the next-vacation-site repository on GitHub (opens in a new tab)"
+                className="text-[0.9rem] font-light opacity-70 transition-opacity hover:opacity-100"
+              >
+                Git
               </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="mx-auto mt-16 flex max-w-[1400px] justify-between border-t border-[rgba(255,255,255,0.15)] pt-8 text-[0.85rem] opacity-60 max-md:flex-col max-md:gap-4 max-md:text-center">
-        <p>&copy; 2026 Celestia Pacific. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Celestia Pacific. All rights
+          reserved.
+        </p>
         <p>Privacy Policy | Terms of Service</p>
       </div>
     </footer>
