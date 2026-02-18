@@ -18,7 +18,7 @@ export function SiteFooter() {
             Celestia Pacific
           </span>
           <p className="max-w-[300px] font-light opacity-70">
-            Crafting unforgettable experiences across the Philippines' iconic
+            Crafting unforgettable experiences across the Philippines&apos; iconic
             islands, mountains, and seas since 2020.
           </p>
         </div>

@@ -17,7 +17,7 @@ export function JournalSection() {
           Islands & Horizons
         </span>
         <h2 className="text-[clamp(2.5rem,5vw,4rem)] [font-family:var(--font-caveat)]">
-          Explorer's Diary
+          Explorer&apos;s Diary
         </h2>
       </div>
       <div className="mx-auto grid max-w-[1200px] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12">

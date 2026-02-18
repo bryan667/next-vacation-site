@@ -6,7 +6,10 @@ export function Hero() {
 
   return (
     <section className="relative flex h-screen items-center justify-center overflow-hidden">
-      <div className="absolute inset-0" data-parallax="0.3">
+      <div
+        className="absolute inset-0 will-change-transform"
+        data-parallax="0.4"
+      >
         <Image
           src={image}
           alt=""

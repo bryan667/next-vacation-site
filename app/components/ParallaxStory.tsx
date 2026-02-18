@@ -24,16 +24,21 @@ export function ParallaxStory(props: ParallaxStoryProps) {
       className="relative flex min-h-screen items-center overflow-hidden"
       id={id}
     >
-      <Image
-        src={image}
-        alt=""
-        fill
-        loading="lazy"
-        decoding="async"
-        sizes="100vw"
-        unoptimized
-        className="scale-100 object-cover"
-      />
+      <div
+        className="absolute inset-0 will-change-transform"
+        data-parallax="0.5"
+      >
+        <Image
+          src={image}
+          alt=""
+          fill
+          loading="lazy"
+          decoding="async"
+          sizes="100vw"
+          unoptimized
+          className="scale-110 object-cover"
+        />
+      </div>
       <div className="absolute inset-0 bg-linear-[135deg,rgba(11,37,50,0.7)_0%,rgba(11,37,50,0.3)_50%,rgba(30,63,32,0.5)_100%]" />
       <div
         className={`${revealClass} relative z-10 max-w-[650px] p-24 max-lg:p-12 max-md:max-w-full ${align === 'right' ? 'ml-auto' : ''}`.trim()}
