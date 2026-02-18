@@ -34,7 +34,6 @@ export function ParallaxStory(props: ParallaxStoryProps) {
           fill
           loading="lazy"
           decoding="async"
-          sizes="100vw"
           unoptimized
           className="scale-110 object-cover"
         />

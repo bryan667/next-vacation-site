@@ -15,7 +15,8 @@ export function Hero() {
           alt=""
           fill
           priority
-          sizes="100vw"
+          quality={100}
+          sizes="100"
           unoptimized
           className="scale-100 object-cover"
         />
